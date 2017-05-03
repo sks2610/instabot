@@ -2,7 +2,8 @@
 import time
 import sys
 import os
-
+reload(sys)
+sys.setdefaultencoding('utf-8')
 sys.path.append(os.path.join(sys.path[0], '../'))
 from instabot import Bot
 
@@ -103,23 +104,23 @@ def getFollowersToFile(self, user):
 
 
 bot = Bot(
-    max_likes_per_day=1000,
-    max_unlikes_per_day=1000,
-    max_follows_per_day=1000,
+    max_likes_per_day=800,
+    max_unlikes_per_day=200,
+    max_follows_per_day=700,
     max_unfollows_per_day=350,
-    max_comments_per_day=100,
+    max_comments_per_day=0,
     max_likes_to_like=50,
-    max_followers_to_follow=500,
+    max_followers_to_follow=1000,
     min_followers_to_follow=10,
-    max_following_to_follow=500,
+    max_following_to_follow=1000,
     min_following_to_follow=10,
     max_followers_to_following_ratio=10,
-    max_following_to_followers_ratio=2,
+    max_following_to_followers_ratio=3,
     min_media_count_to_follow=7,
-    like_delay=10,
-    unlike_delay=10,
-    follow_delay=30,
-    unfollow_delay=30,
+    like_delay=45,
+    unlike_delay=45,
+    follow_delay=50,
+    unfollow_delay=50,
     comment_delay=60,
     # whitelist='whitelist.txt',
     stop_words=['order', 'shop', 'store', 'free', 'doodleartindonesia',
